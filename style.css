@@ -4,69 +4,113 @@
   padding: 0;
 }
 
- 
 body {
   font-family: 'Inter', sans-serif;
-  background: url('https://fitnesscfgyms.com/wp-content/uploads/2021/10/fitness-center.jpeg');
-  
+  background: url('https://fitnesscfgyms.com/wp-content/uploads/2021/10/fitness-center.jpeg') no-repeat center center fixed;
   background-size: cover;
-  color: #333;
-  line-height: 1.6;
+  color: white;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
-
-
-.app {
-  max-width: 500px;
-  margin: 50px auto;
-  padding: 20px;
-  background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+.layout {
+  display: flex;
+  min-height: 100vh;
 }
 
-header {
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  color: white;
+  padding: 30px 20px;
+}
+
+.sidebar h2 {
+  margin-bottom: 30px;
+  font-size: 1.6rem;
+}
+
+.sidebar ul {
+  list-style: none;
+}
+
+.sidebar ul li {
+  margin-bottom: 20px;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.sidebar ul li a:hover {
+  opacity: 0.8;
+}
+
+/* Main content */
+.main-content {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.main-header h1 {
+  font-size: 3rem;
   text-align: center;
-  margin-bottom: 25px;
+  margin-bottom: 40px;
+  color: white;
 }
 
-header h1 {
-  font-size: 2rem;
-  color: #111;
-}
-
-header p {
-  color: #666;
-  font-size: 0.95rem;
+/* Glassmorphism card */
+.tracker-section {
+  width: 100%;
+  max-width: 400px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 15px;
 }
 
 .form-group input {
-  padding: 12px;
+  padding: 14px;
   font-size: 1rem;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
-  transition: border 0.2s ease;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  backdrop-filter: blur(5px);
 }
 
-.form-group input:focus {
-  border-color: #007bff;
-  outline: none;
+.form-group input::placeholder {
+  color: #e0e0e0;
 }
 
 .btn {
-  padding: 12px;
+  padding: 14px;
   font-size: 1rem;
   background-color: #007bff;
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
+  font-weight: bold;
   transition: background 0.2s ease;
 }
 
@@ -76,13 +120,15 @@ form {
 
 .activity-list {
   list-style: none;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
 .activity-list li {
-  background: #f0f2f5;
+  background: rgba(255, 255, 255, 0.1);
   padding: 14px;
   margin-bottom: 10px;
   border-radius: 10px;
   font-weight: 500;
+  color: white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
