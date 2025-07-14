@@ -5,14 +5,17 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Fitness Tracker</title>
   <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 <body>
   <div class="layout">
     
     <!-- Sidebar -->
-    <aside class="sidebar">
-      <h2>🏋️ STAY FIT</h2>
+    <aside class="sidebar slide-in-left">
+      <h2>🏋️ Tracker</h2>
       <nav>
         <ul>
           <li><a href="#">Dashboard</a></li>
@@ -23,27 +26,42 @@
     </aside>
 
     <!-- Main Content -->
-    <main class="main-content">
+    <main class="main-content fade-in">
       <header class="main-header">
-        <h1> Fitness Tracker</h1>
+        <h1 class="text-pop"> Fitness Tracker</h1>
       </header>
 
-      <section class="tracker-section">
-        <form id="trackerForm">
-          <div class="form-group">
-            <input type="text" id="activity" placeholder="e.g., Running" required />
-          </div>
-          <div class="form-group">
-            <input type="number" id="duration" placeholder="Duration (min)" required />
-          </div>
-          <button type="submit" class="btn">+ Add Activity</button>
-        </form>
+      <section class="intro-section">
+        <!-- Left Text -->
+        <div class="intro-text slide-up">
+          <h2>Welcome to Your Fitness Journey</h2>
+          <p>
+            Track your workouts, monitor your progress, and stay committed to your goals — all in one beautifully designed, easy-to-use platform.
+          </p>
+          <p>
+            Whether you're a beginner or a pro, our fitness tracker helps you build better habits and push your limits. Let’s get stronger, together. 💪
+          </p>
+        </div>
 
-        <ul id="activityList" class="activity-list"></ul>
+        <!-- Right Image -->
+        <div class="intro-image fade-in-delayed">
+          <img src="img.png" alt="Fitness Model" />
+        </div>
       </section>
+
+      <!-- Contact Us -->
+      <footer class="contact-section slide-up">
+        <p>Contact Us</p>
+        <div class="social-icons">
+          <a href="mailto:yourmail@example.com" class="icon" target="_blank">
+            <i class="fas fa-envelope"></i>
+          </a>
+          <a href="https://instagram.com/yourprofile" class="icon" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </div>
+      </footer>
     </main>
   </div>
-
-  <script src="script.js"></script>
 </body>
 </html>
