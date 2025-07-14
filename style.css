@@ -6,7 +6,7 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background: url('https://fitnesscfgyms.com/wp-content/uploads/2021/10/fitness-center.jpeg') no-repeat center center fixed;
+  background: url('fitness-center.jpeg') no-repeat center center fixed;
   background-size: cover;
   color: white;
   min-height: 100vh;
@@ -25,6 +25,8 @@ body {
   backdrop-filter: blur(10px);
   color: white;
   padding: 30px 20px;
+  opacity: 0;
+  animation: slideInLeft 1s ease forwards;
 }
 
 .sidebar h2 {
@@ -44,91 +46,170 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 500;
-  transition: opacity 0.2s;
+  transition: all 0.3s ease;
 }
 
 .sidebar ul li a:hover {
   opacity: 0.8;
+  padding-left: 10px;
 }
 
 /* Main content */
 .main-content {
   flex: 1;
-  padding: 60px 40px;
+  padding: 40px 60px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: flex-start;
 }
 
-.main-header h1 {
-  font-size: 3rem;
-  text-align: center;
+/* Heading */
+.main-header {
+  margin-top: 30px;
   margin-bottom: 40px;
-  color: white;
+  text-align: center;
 }
 
-/* Glassmorphism card */
-.tracker-section {
+.main-header h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  font-family: 'Montserrat', sans-serif;
+  background: linear-gradient(to right, #00d2ff, #3a47d5);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  animation: popText 1.2s ease forwards;
+}
+
+/* Intro Section */
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Left Text */
+.intro-text {
+  flex: 1;
+  max-width: 550px;
+  opacity: 0;
+  animation: slideUp 1s ease 0.5s forwards;
+}
+
+.intro-text h2 {
+  font-size: 2rem;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  margin-bottom: 20px;
+  color: #ffffff;
+}
+
+.intro-text p {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #f0f0f0;
+  margin-bottom: 15px;
+}
+
+/* Right Image */
+.intro-image {
+  flex: 1;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 1s ease 1s forwards;
+}
+
+.intro-image img {
   width: 100%;
   max-width: 400px;
-  background: rgba(255, 255, 255, 0.08);
-  border-radius: 16px;
-  padding: 30px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease;
 }
 
-form {
+.intro-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Contact Section */
+.contact-section {
+  margin-top: 80px;
+  text-align: center;
+  opacity: 0;
+  animation: slideUp 1s ease 1.2s forwards;
+}
+
+.contact-section p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  font-weight: 600;
+  color: #ffffffcc;
+}
+
+.social-icons {
   display: flex;
-  flex-direction: column;
-  gap: 15px;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 10px;
 }
 
-.form-group input {
-  padding: 14px;
-  font-size: 1rem;
-  border: none;
-  border-radius: 8px;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.2);
-  color: white;
-  backdrop-filter: blur(5px);
-}
-
-.form-group input::placeholder {
-  color: #e0e0e0;
-}
-
-.btn {
-  padding: 14px;
-  font-size: 1rem;
-  background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.2s ease;
-}
-
-.btn:hover {
-  background-color: #0056b3;
-}
-
-.activity-list {
-  list-style: none;
-  margin-top: 30px;
-}
-
-.activity-list li {
+.icon {
+  font-size: 1.5rem;
+  color: #ffffffcc;
   background: rgba(255, 255, 255, 0.1);
-  padding: 14px;
-  margin-bottom: 10px;
-  border-radius: 10px;
-  font-weight: 500;
-  color: white;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 10px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.icon:hover {
+  background: #00d2ff;
+  color: #fff;
+  transform: scale(1.15);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  from {
+    transform: translateX(-50px);
+    opacity: 0;
+  }
+}
+
+@keyframes popText {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
