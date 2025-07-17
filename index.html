@@ -6,62 +6,89 @@
   <title>Fitness Tracker</title>
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Montserrat:wght@600;800&display=swap" rel="stylesheet" />
-  <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
 </head>
 <body>
-  <div class="layout">
-    
-    <!-- Sidebar -->
-    <aside class="sidebar slide-in-left">
-      <h2>🏋️ Tracker</h2>
-      <nav>
+
+  <!-- Sidebar -->
+  <aside class="sidebar slide-in-left">
+    <h2>🏋️ Tracker</h2>
+    <nav>
+      <ul>
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Profile</a></li>
+        <li><a href="#">Diet</a></li>
+      </ul>
+    </nav>
+  </aside>
+
+  <!-- Main Wrapper -->
+  <div class="main-wrapper">
+
+    <!-- Section 1 -->
+    <section class="section section-1">
+      <main class="main-content fade-in">
+        <header class="main-header">
+          <h1 class="text-pop">🏋️‍♂️ Fitness Tracker</h1>
+        </header>
+
+        <section class="intro-section">
+          <div class="intro-text slide-up">
+            <h2>Welcome to Your Fitness Journey</h2>
+            <p>Track your workouts, monitor progress, and build discipline — all in one easy, modern app.</p>
+            <p>Whether you're starting out or levelling up, our platform keeps you moving. Let's grow stronger together! 💪</p>
+          </div>
+
+          <div class="intro-image fade-in-delayed">
+            <img src="img.png" alt="Fitness Model" />
+          </div>
+        </section>
+
+        <footer class="contact-section slide-up">
+          <p>Contact Us</p>
+          <div class="social-icons">
+            <a href="mailto:yourmail@example.com" class="icon" target="_blank"><i class="fas fa-envelope"></i></a>
+            <a href="https://instagram.com/yourprofile" class="icon" target="_blank"><i class="fab fa-instagram"></i></a>
+          </div>
+        </footer>
+      </main>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="section section-2">
+      <div class="second-content fade-in">
+        <h2>Nutrition & Diet Plans</h2>
+        <p>Get expert-approved diets tailored to your body type and goals. Fuel your body the smart way. 🥗</p>
         <ul>
-          <li><a href="#">Dashboard</a></li>
-          <li><a href="#">Profile</a></li>
-          <li><a href="#">Diet</a></li>
+          <li>🌅 Morning: Oats with banana + almonds</li>
+          <li>🍱 Lunch: Brown rice, dal, salad</li>
+          <li>☕ Snack: Greek yogurt with berries</li>
+          <li>🌙 Dinner: Grilled chicken/tofu + vegetables</li>
         </ul>
-      </nav>
-    </aside>
+      </div>
+    </section>
 
-    <!-- Main Content -->
-    <main class="main-content fade-in">
-      <header class="main-header">
-        <h1 class="text-pop"> Fitness Tracker</h1>
-      </header>
+    <!-- Section 3 -->
+    <section class="section section-3">
+      <div class="third-content fade-in">
+        <h2>Custom Workout Routines</h2>
+        <p>Choose guided routines that evolve with you. Burn fat, build muscle, or stay fit — on your terms. 🔥</p>
+        
+        
+        <h3>Workout Split</h3>
+        
+        <ul>
+          <li>Day 1: Chest & Triceps</li>
+          <li>Day 2: Back & Biceps</li>
+          <li>Day 3: Legs</li>
+          <li>Day 4: Shoulders & Abs</li>
+          <li>Day 5: Cardio + Core</li>
+        </ul>
 
-      <section class="intro-section">
-        <!-- Left Text -->
-        <div class="intro-text slide-up">
-          <h2>Welcome to Your Fitness Journey</h2>
-          <p>
-            Track your workouts, monitor your progress, and stay committed to your goals — all in one beautifully designed, easy-to-use platform.
-          </p>
-          <p>
-            Whether you're a beginner or a pro, our fitness tracker helps you build better habits and push your limits. Let’s get stronger, together. 💪
-          </p>
-        </div>
+      </div>
+    </section>
 
-        <!-- Right Image -->
-        <div class="intro-image fade-in-delayed">
-          <img src="img.png" alt="Fitness Model" />
-        </div>
-      </section>
-
-      <!-- Contact Us -->
-      <footer class="contact-section slide-up">
-        <p>Contact Us</p>
-        <div class="social-icons">
-          <a href="mailto:yourmail@example.com" class="icon" target="_blank">
-            <i class="fas fa-envelope"></i>
-          </a>
-          <a href="https://instagram.com/yourprofile" class="icon" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </div>
-      </footer>
-    </main>
   </div>
+
 </body>
 </html>
